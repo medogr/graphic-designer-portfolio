@@ -1,252 +1,178 @@
 /* إعدادات عامة */
 * {
-    margin: 0; /* إزالة الهوامش الافتراضية */
-    padding: 0; /* إزالة الحشوات الافتراضية */
-    box-sizing: border-box; /* ضمان أن الحشوات والهامش لا تؤثر على حجم العنصر */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif; /* تعيين الخط الافتراضي */
-    background-color: #f5f5f5; /* خلفية فاتحة */
-    color: #333; /* لون النص */
-    transition: background-color 0.5s ease; /* إضافة تأثير انتقال لتغيير اللون */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.5s ease;
 }
 
 /* الشريط العلوي */
 header {
-    background-color: #333; /* لون خلفية الشريط العلوي */
-    padding: 20px; /* حشوة داخلية */
-    text-align: center; /* محاذاة النص إلى المركز */
-    animation: slideInDown 1s ease-out; /* تأثير الانزلاق من الأعلى عند التحميل */
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    animation: slideInDown 1s ease-out;
 }
 
 header nav ul {
-    list-style: none; /* إزالة النقاط من القوائم */
+    list-style: none;
 }
 
 header nav ul li {
-    display: inline; /* عرض العناصر في سطر واحد */
-    margin-right: 20px; /* إضافة مسافة بين العناصر */
+    display: inline;
+    margin-right: 20px;
 }
 
 header nav ul li a {
-    color: #fff; /* لون النص */
-    text-decoration: none; /* إزالة الخط تحت الرابط */
-    font-size: 18px; /* حجم الخط */
-    transition: color 0.3s ease; /* إضافة تأثير الانتقال عند التفاعل */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #4CAF50; /* تغيير اللون عند التفاعل مع الرابط */
+    color: #4CAF50;
 }
 
 /* الصفحة الرئيسية */
 #home {
-    background-color: #1a1a1a; /* لون خلفية داكنة للصفحة الرئيسية */
-    color: white; /* لون النص أبيض */
-    text-align: center; /* محاذاة النص إلى المركز */
-    padding: 100px 0; /* حشوة داخلية كبيرة لتوسيع المنطقة */
-    animation: fadeIn 2s ease-out; /* تأثير تلاشي عند التحميل */
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 2s ease-out;
 }
 
 /* عنّي */
-#about, #services, #contact {
-    padding: 50px; /* حشوة داخلية للقسم */
-    text-align: center; /* محاذاة النص إلى المركز */
-    background-color: #fff; /* خلفية بيضاء */
-    animation: fadeInUp 1.5s ease-out; /* تأثير التلاشي مع الحركة للأعلى */
+#about, #services, #contact, #comments {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 /* محفظة الأعمال */
 #portfolio {
-    padding: 50px; /* حشوة داخلية للقسم */
-    background-color: #e2e2e2; /* خلفية بلون فاتح */
-    text-align: center; /* محاذاة النص إلى المركز */
+    padding: 50px;
+    background-color: #e2e2e2;
+    text-align: center;
 }
 
 .portfolio-gallery {
-    display: flex; /* استخدام Flexbox لترتيب العناصر */
-    flex-wrap: wrap; /* السماح بالعناصر بالتفاف */
-    justify-content: center; /* محاذاة العناصر إلى المركز */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio-item {
-    width: 30%; /* عرض العناصر */
-    margin: 10px; /* إضافة مسافة بين العناصر */
-    transition: transform 0.3s ease; /* تأثير التفاعل مع العناصر */
+    width: 30%;
+    margin: 10px;
+    transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover {
-    transform: scale(1.05); /* تكبير العنصر عند التفاعل */
+    transform: scale(1.05);
 }
 
 .portfolio-item img {
-    width: 100%; /* عرض الصورة بالكامل */
-    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-    border-radius: 8px; /* إضافة حواف دائرية للصورة */
-    transition: opacity 0.5s ease; /* تأثير تلاشي عند المرور على الصورة */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.5s ease;
 }
 
 .portfolio-item img:hover {
-    opacity: 0.8; /* تقليل شفافية الصورة عند التفاعل */
+    opacity: 0.8;
 }
 
-/* نموذج الاتصال */
-form {
-    max-width: 500px; /* تعيين أقصى عرض للنموذج */
-    margin: 0 auto; /* محاذاة النموذج إلى المركز */
-    background-color: #fff; /* خلفية بيضاء للنموذج */
-    padding: 20px; /* حشوة داخلية للنموذج */
-    border-radius: 8px; /* إضافة حواف دائرية للنموذج */
-    animation: fadeInUp 1.5s ease-out; /* تأثير التلاشي مع الحركة للأعلى */
+/* نموذج التعليق */
+#comment-form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-form input, form textarea {
-    width: 100%; /* تعيين العرض الكامل للحقل */
-    padding: 10px; /* حشوة داخلية */
-    margin-top: 5px; /* مسافة بين الحقول */
-    border: 1px solid #ccc; /* حدود رقيقة باللون الرمادي */
-    border-radius: 4px; /* حواف دائرية */
+#comment-form input, #comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
 }
 
-form button {
-    margin-top: 20px; /* مسافة فوق الزر */
-    padding: 10px 20px; /* حشوة داخلية للزر */
-    background-color: #333; /* خلفية داكنة للزر */
-    color: white; /* لون النص أبيض */
-    border: none; /* إزالة الحدود */
-    cursor: pointer; /* تغيير شكل المؤشر عند المرور على الزر */
-    transition: background-color 0.3s ease; /* إضافة تأثير على اللون عند التفاعل */
+#comment-form button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #4CAF50; /* تغيير اللون عند التفاعل مع الزر */
+#comment-form button:hover {
+    background-color: #45a049;
+}
+
+/* عرض التعليقات */
+#comment-list {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.comment-item {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item strong {
+    font-size: 1.1em;
+    color: #4CAF50;
+}
+
+.comment-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* روابط التواصل الاجتماعي */
 .social-icons {
-    margin-top: 10px; /* مسافة فوق الأيقونات */
-    text-align: center; /* محاذاة الأيقونات إلى المركز */
+    margin-top: 10px;
+    text-align: center;
 }
 
 .social-icons a {
-    margin: 0 10px; /* مسافة بين الأيقونات */
-    display: inline-block; /* عرض الأيقونات بشكل أفقي */
+    margin: 0 10px;
+    display: inline-block;
 }
 
 .social-icons img {
-    width: 40px; /* عرض الأيقونة */
-    height: 40px; /* ارتفاع الأيقونة */
-    transition: transform 0.3s ease; /* إضافة تأثير تكبير عند التفاعل مع الأيقونات */
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.2); /* تكبير الأيقونة عند التفاعل */
+    transform: scale(1.2);
 }
 
 /* التذييل */
 footer {
-    text-align: center; /* محاذاة النص إلى المركز */
-    padding: 20px; /* حشوة داخلية */
-    background-color: #333; /* خلفية داكنة */
-    color: white; /* لون النص أبيض */
-    animation: fadeInUp 1.5s ease-out; /* تأثير التلاشي مع الحركة للأعلى */
-}
-
-/* الأنيمشنات */
-@keyframes slideInDown {
-    0% {
-        transform: translateY(-100%); /* بداية الأنيمشن من الأعلى */
-    }
-    100% {
-        transform: translateY(0); /* نهاية الأنيمشن في مكانه الطبيعي */
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* بداية الأنيمشن بتلاشي العنصر */
-    }
-    100% {
-        opacity: 1; /* نهاية الأنيمشن بظهور العنصر */
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px); /* بداية الأنيمشن بتلاشي العنصر وحركته للأعلى */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* نهاية الأنيمشن مع ظهور العنصر في مكانه الطبيعي */
-    }
-}
-
-/* قسم التعليقات */
-#comments {
-    padding: 50px; /* حشوة داخلية كبيرة */
-    text-align: center; /* محاذاة النص إلى المركز */
-    background-color: #fff; /* خلفية بيضاء للقسم */
-}
-
-#comment-list {
-    margin-bottom: 20px; /* مسافة أسفل قائمة التعليقات */
-    text-align: left; /* محاذاة النص لليسار */
-}
-
-.comment-item {
-    background: #f9f9f9; /* خلفية فاتحة للتعليقات */
-    padding: 20px; /* حشوة داخلية للتعليق */
-    margin: 10px 0; /* مسافة بين التعليقات */
-    border-radius: 8px; /* حواف دائرية للتعليق */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للتعليقات */
-    transition: transform 0.3s ease; /* تأثير التفاعل مع التعليقات */
-}
-
-.comment-item:hover {
-    transform: scale(1.02); /* تكبير التعليق عند التفاعل */
-}
-
-.comment-item strong {
-    font-size: 1.1em; /* زيادة حجم الخط للاسم */
-    color: #4CAF50; /* لون مميز للاسم */
-}
-
-.comment-item p {
-    font-size: 1em; /* حجم خط النص */
-    color: #555; /* لون النص */
-    line-height: 1.6; /* تباعد بين الأسطر لسهولة القراءة */
-}
-
-#comment-form {
-    margin-top: 30px; /* مسافة فوق النموذج */
-    background-color: #fff; /* خلفية بيضاء للنموذج */
-    padding: 20px; /* حشوة داخلية */
-    border-radius: 8px; /* حواف دائرية */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للنموذج */
-    text-align: center; /* محاذاة النص إلى المركز */
-}
-
-#comment-form input, #comment-form textarea {
-    width: 100%; /* تعيين العرض الكامل للحقل */
-    padding: 12px; /* حشوة داخلية */
-    margin: 10px 0; /* مسافة بين الحقول */
-    border: 1px solid #ddd; /* حدود رقيقة */
-    border-radius: 6px; /* حواف دائرية */
-    box-sizing: border-box; /* التأكد أن الحشوة لا تؤثر على العرض */
-}
-
-#comment-form button {
-    padding: 12px 25px; /* حشوة داخلية للزر */
-    background-color: #4CAF50; /* خلفية زر مميزة باللون الأخضر */
-    color: white; /* لون النص أبيض */
-    border: none; /* إزالة الحدود */
-    border-radius: 6px; /* حواف دائرية للزر */
-    cursor: pointer; /* تغيير شكل المؤشر عند التفاعل مع الزر */
-    transition: background-color 0.3s ease; /* إضافة تأثير الانتقال عند التفاعل */
-}
-
-#comment-form button:hover {
-    background-color: #45a049; /* تغيير اللون عند التفاعل مع الزر */
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
