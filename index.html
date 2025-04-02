@@ -21,71 +21,49 @@
 
     <section id="home">
         <div class="hero">
-            <!-- هنا وضعت الشعار مع زيادة الحجم -->
-            <img src="images/logo.png" alt="Logo" class="logo"> <!-- ضع اسم الشعار الصحيح هنا -->
+            <img src="images/logo.png" alt="Logo" class="logo">
             <p>.. .</p>
         </div>
-    </section>
-
-    <section id="about">
-        <h2>عنّي</h2>
-        <p>أنا محمد خالد، مصمم جرافيك بخبرة سنتين، متخصص في تصميم الشعارات، الهويات البصرية، والمحتوى الإعلاني.</p>
     </section>
 
     <section id="portfolio">
         <h2>محفظة الأعمال</h2>
         <div class="portfolio-gallery">
-            <div class="portfolio-item"><img src="images/work1.png" alt="تصميم 1"></div>
-            <div class="portfolio-item"><img src="images/work2.png" alt="تصميم 2"></div>
-            <div class="portfolio-item"><img src="images/work3.png" alt="تصميم 3"></div>
-            <div class="portfolio-item"><img src="images/work4.png" alt="تصميم 4"></div>
-            <div class="portfolio-item"><img src="images/work5.png" alt="تصميم 5"></div>
-            <div class="portfolio-item"><img src="images/work6.png" alt="تصميم 6"></div>
-            <div class="portfolio-item"><img src="images/work7.png" alt="تصميم 7"></div>
-            <div class="portfolio-item"><img src="images/work8.png" alt="تصميم 8"></div>
-            <div class="portfolio-item"><img src="images/work9.png" alt="تصميم 9"></div>
-            <div class="portfolio-item"><img src="images/work10.png" alt="تصميم 10"></div>
+            <div class="portfolio-item"><a href="images/work1.png" target="_blank"><img src="images/work1.png" alt="تصميم 1"></a></div>
+            <div class="portfolio-item"><a href="images/work2.png" target="_blank"><img src="images/work2.png" alt="تصميم 2"></a></div>
+            <div class="portfolio-item"><a href="images/work3.png" target="_blank"><img src="images/work3.png" alt="تصميم 3"></a></div>
+            <div class="portfolio-item"><a href="images/work4.png" target="_blank"><img src="images/work4.png" alt="تصميم 4"></a></div>
         </div>
     </section>
 
-    <section id="services">
-        <h2>الخدمات</h2>
-        <ul>
-            <li>تصميم شعارات وهوية بصرية</li>
-            <li>تصميم واجهات مواقع</li>
-            <li>إعلانات سوشيال ميديا</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>اتصل بي</h2>
-        <form action="mailto:youremail@example.com" method="post">
-            <label for="name">اسمك:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">بريدك الإلكتروني:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">رسالتك:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 محمد خالد - جميع الحقوق محفوظة</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100064973460780" target="_blank">
-                <img src="images/facebook-icon.png" alt="Facebook">
-            </a>
-            <a href="https://wa.me/+201127867797" target="_blank">
-                <img src="images/whatsapp-icon.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.behance.net/mohamed_khalid1" target="_blank">
-                <img src="images/behance-icon.png" alt="Behance">
-            </a>
-            <a href="https://www.linkedin.com/in/mohamed-khalid-48059022b" target="_blank">
-                <img src="images/linkedin-icon.png" alt="LinkedIn">
-            </a>
+    <section id="comments">
+        <h2>التعليقات</h2>
+        <div class="comment-section">
+            <div id="comment-list">
+                <!-- سيتم إضافة التعليقات هنا ديناميكيًا -->
+            </div>
+            <form id="comment-form">
+                <input type="text" id="comment-name" placeholder="اسمك" required>
+                <textarea id="comment-text" placeholder="اكتب تعليقك هنا" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
         </div>
-    </footer>
+    </section>
+
+    <script>
+        document.getElementById("comment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let name = document.getElementById("comment-name").value;
+            let text = document.getElementById("comment-text").value;
+            if (name && text) {
+                let commentList = document.getElementById("comment-list");
+                let newComment = document.createElement("div");
+                newComment.classList.add("comment");
+                newComment.innerHTML = `<strong>${name}:</strong> <p>${text}</p>`;
+                commentList.appendChild(newComment);
+                document.getElementById("comment-form").reset();
+            }
+        });
+    </script>
 </body>
 </html>
