@@ -49,12 +49,9 @@ header nav ul li a:hover {
     animation: fadeIn 2s ease-out;
 }
 
-/* تنسيق الشعار */
-.hero .logo {
-    max-width: 200px;  /* تحديد الحد الأقصى للعرض */
-    height: auto;      /* الحفاظ على النسبة الأصلية للصورة */
-    display: block;    /* عرض الصورة كعنصر block */
-    margin: 0 auto;    /* محاذاة الصورة في المنتصف */
+#home .logo {
+    max-width: 150px; /* تأكد من أن الشعار بحجم مناسب */
+    margin-bottom: 20px;
 }
 
 /* عنّي */
