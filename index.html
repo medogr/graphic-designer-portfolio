@@ -21,8 +21,9 @@
 
     <section id="home">
         <div class="hero">
-            <h1> KING Graphic </h1>
-            <p> .. .</p>
+            <!-- استبدال النص بالشعار -->
+            <img src="images/logo.png" alt="Logo" class="logo">  <!-- ضع المسار الصحيح لصورة الشعار هنا -->
+            <p>.. .</p>
         </div>
     </section>
 
@@ -69,21 +70,6 @@
         </form>
     </section>
 
-    <!-- قسم التعليقات -->
-    <section id="comments">
-        <h2>التعليقات</h2>
-        <div id="comment-list">
-            <!-- هنا سيتم عرض التعليقات -->
-        </div>
-
-        <!-- نموذج إضافة تعليق -->
-        <form id="comment-form">
-            <input type="text" id="name" placeholder="اسمك" required>
-            <textarea id="comment" placeholder="اكتب تعليقك هنا..." required></textarea>
-            <button type="submit">إرسال التعليق</button>
-        </form>
-    </section>
-
     <footer>
         <p>&copy; 2025 محمد خالد - جميع الحقوق محفوظة</p>
         <div class="social-icons">
@@ -101,36 +87,5 @@
             </a>
         </div>
     </footer>
-
-    <!-- إضافة سكربت جافا -->
-    <script>
-        // الحصول على العناصر
-        const commentForm = document.getElementById('comment-form');
-        const commentList = document.getElementById('comment-list');
-
-        // وظيفة إضافة التعليق
-        commentForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
-
-            const name = document.getElementById('name').value; // الحصول على اسم المعلق
-            const comment = document.getElementById('comment').value; // الحصول على نص التعليق
-
-            // إنشاء العنصر الجديد للتعليق
-            const newComment = document.createElement('div');
-            newComment.classList.add('comment-item');
-
-            // إضافة الاسم والتعليق داخل العنصر
-            newComment.innerHTML = `
-                <strong>${name}</strong>
-                <p>${comment}</p>
-            `;
-
-            // إضافة التعليق إلى القائمة
-            commentList.appendChild(newComment);
-
-            // إعادة تعيين النموذج بعد إرسال التعليق
-            commentForm.reset();
-        });
-    </script>
 </body>
 </html>
