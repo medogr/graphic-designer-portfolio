@@ -102,6 +102,35 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- إضافة سكربت جافا -->
+    <script>
+        // الحصول على العناصر
+        const commentForm = document.getElementById('comment-form');
+        const commentList = document.getElementById('comment-list');
+
+        // وظيفة إضافة التعليق
+        commentForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
+
+            const name = document.getElementById('name').value; // الحصول على اسم المعلق
+            const comment = document.getElementById('comment').value; // الحصول على نص التعليق
+
+            // إنشاء العنصر الجديد للتعليق
+            const newComment = document.createElement('div');
+            newComment.classList.add('comment-item');
+
+            // إضافة الاسم والتعليق داخل العنصر
+            newComment.innerHTML = `
+                <strong>${name}</strong>
+                <p>${comment}</p>
+            `;
+
+            // إضافة التعليق إلى القائمة
+            commentList.appendChild(newComment);
+
+            // إعادة تعيين النموذج بعد إرسال التعليق
+            commentForm.reset();
+        });
+    </script>
 </body>
 </html>
