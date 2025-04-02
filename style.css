@@ -1,0 +1,238 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* الشريط العلوي للتنقل */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    animation: slideInDown 1s ease-in-out;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* الصفحة الرئيسية */
+#home {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: bounceInDown 1s ease-in-out;
+}
+
+#home p {
+    font-size: 1.2em;
+    opacity: 0;
+    animation: fadeInUp 1.5s 0.5s forwards;
+}
+
+/* عنّي */
+#about {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* محفظة الأعمال */
+#portfolio {
+    padding: 50px;
+    background-color: #e2e2e2;
+    animation: fadeInUp 2s ease-out;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.portfolio-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.portfolio-item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.portfolio-item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+/* الخدمات */
+#services {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+#services ul {
+    list-style: none;
+}
+
+#services ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* اتصل بي */
+#contact {
+    padding: 50px;
+    background-color: #e2e2e2;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    animation: slideInUp 1s ease-in-out;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4CAF50;
+}
+
+/* روابط التواصل الاجتماعي */
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links ul {
+    list-style: none;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* التذييل */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* الأنيميشين الأساسية */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceInDown {
+    0% { transform: translateY(-3000px); opacity: 0; }
+    60% { transform: translateY(30px); opacity: 1; }
+    80% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
