@@ -69,17 +69,18 @@
         </form>
     </section>
 
+    <!-- قسم التعليقات -->
     <section id="comments">
         <h2>التعليقات</h2>
         <div id="comment-list">
-            <!-- سيتم عرض التعليقات هنا -->
+            <!-- هنا سيتم عرض التعليقات -->
         </div>
+
+        <!-- نموذج إضافة تعليق -->
         <form id="comment-form">
-            <label for="username">اسمك:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="comment">تعليقك:</label>
-            <textarea id="comment" name="comment" required></textarea>
-            <button type="submit">إرسال</button>
+            <input type="text" id="name" placeholder="اسمك" required>
+            <textarea id="comment" placeholder="اكتب تعليقك هنا..." required></textarea>
+            <button type="submit">إرسال التعليق</button>
         </form>
     </section>
 
@@ -101,25 +102,6 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('comment-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // منع التحديث التلقائي للصفحة
-
-            // جلب القيم من النموذج
-            var username = document.getElementById('username').value;
-            var comment = document.getElementById('comment').value;
-
-            // إنشاء عنصر جديد للتعليق
-            var commentItem = document.createElement('div');
-            commentItem.classList.add('comment-item');
-            commentItem.innerHTML = `<strong>${username}:</strong> <p>${comment}</p>`;
-
-            // إضافة التعليق إلى القائمة
-            document.getElementById('comment-list').appendChild(commentItem);
-
-            // إعادة تعيين النموذج
-            document.getElementById('comment-form').reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
