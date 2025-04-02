@@ -49,8 +49,16 @@ header nav ul li a:hover {
     animation: fadeIn 2s ease-out;
 }
 
+/* تنسيق الشعار */
+.hero .logo {
+    max-width: 200px;  /* تحديد الحد الأقصى للعرض */
+    height: auto;      /* الحفاظ على النسبة الأصلية للصورة */
+    display: block;    /* عرض الصورة كعنصر block */
+    margin: 0 auto;    /* محاذاة الصورة في المنتصف */
+}
+
 /* عنّي */
-#about, #services, #contact, #comments {
+#about, #services, #contact {
     padding: 50px;
     text-align: center;
     background-color: #fff;
@@ -91,61 +99,36 @@ header nav ul li a:hover {
     opacity: 0.8;
 }
 
-/* نموذج التعليق */
-#comment-form {
-    margin-top: 30px;
+/* نموذج الاتصال */
+form {
+    max-width: 500px;
+    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
 }
 
-#comment-form input, #comment-form textarea {
+form input, form textarea {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#comment-form button {
-    padding: 12px 25px;
-    background-color: #4CAF50;
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
     color: white;
     border: none;
-    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#comment-form button:hover {
-    background-color: #45a049;
-}
-
-/* عرض التعليقات */
-#comment-list {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.comment-item {
-    background: #f9f9f9;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.comment-item strong {
-    font-size: 1.1em;
-    color: #4CAF50;
-}
-
-.comment-item p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
+form button:hover {
+    background-color: #4CAF50;
 }
 
 /* روابط التواصل الاجتماعي */
@@ -175,4 +158,35 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* الأنيمشنات */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
