@@ -50,7 +50,7 @@ header nav ul li a:hover {
 }
 
 #home .logo {
-    max-width: 150px; /* تأكد من أن الشعار بحجم مناسب */
+    max-width: 250px; /* زيادة حجم الشعار هنا */
     margin-bottom: 20px;
 }
 
